@@ -1,0 +1,12 @@
+fernetKey: aERBZE5MN3E0TjRjU2xzQWxCdTNIUks0WGFTZThoWXc=
+webserverSecretKey: aERBZE5MN3E0TjRjU2xzQWxCdTNIUks0WGFTZThoWXc=
+
+dags:
+  gitSync:
+    enabled: true
+    repo: https://github.com/airscholar/Kubernetes-For-DataEngineering.git
+    branch: main
+    rev: HEAD
+    depth: 1
+    maxFailures: 0
+    subPath: "dags"
