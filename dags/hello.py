@@ -3,8 +3,8 @@ from airflow.operators.bash import BashOperator
 from datetime import datetime, timedelta
 
 default_args = {
-    'owner': 'datamasterylab',
-    'start_date': datetime(2024, 1, 24),
+    'owner': 'datamasterylab.com',
+    'start_date': datetime(2024, 1, 25),
     'catchup': False
 }
 
@@ -15,15 +15,15 @@ dag = DAG(
 )
 
 t1 = BashOperator(
-    task_id='hello_world',
+    task_id = 'hello_world',
     bash_command='echo "Hello World"',
-    dag=dag
+    dag = dag
 )
 
 t2 = BashOperator(
-    task_id='hello_dml',
-    bash_command='echo "Hello Data Mastery Lab!"',
-    dag=dag
+    task_id = 'hello_dml',
+    bash_command='echo "Hello Data Mastery Lab"',
+    dag = dag
 )
 
 t1 >> t2
